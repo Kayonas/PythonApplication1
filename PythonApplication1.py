@@ -1,27 +1,27 @@
 # task_manager.py
 # -*- coding: utf-8 -*-
 
-# здесь начнется ваш код
-print("Пример программы с использованием кодировки UTF-8")
+# Г§Г¤ГҐГ±Гј Г­Г Г·Г­ГҐГІГ±Гї ГўГ Гё ГЄГ®Г¤
+print("ГЏГ°ГЁГ¬ГҐГ° ГЇГ°Г®ГЈГ°Г Г¬Г¬Г» Г± ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ Г­ГЁГҐГ¬ ГЄГ®Г¤ГЁГ°Г®ГўГЄГЁ UTF-8")
 def add_task(task):
-    """Добавляет задачу."""
+    """Г„Г®ГЎГ ГўГ«ГїГҐГІ Г§Г Г¤Г Г·Гі."""
     pass
 
 def list_tasks():
-    """Выводит список задач."""
-    return "Образец"
+    """Г‚Г»ГўГ®Г¤ГЁГІ Г±ГЇГЁГ±Г®ГЄ Г§Г Г¤Г Г·."""
+    return "ГЋГЎГ°Г Г§ГҐГ¶"
 
 def complete_task(task_id):
-    """Отмечает задачу как выполненную."""
+    """ГЋГІГ¬ГҐГ·Г ГҐГІ Г§Г Г¤Г Г·Гі ГЄГ ГЄ ГўГ»ГЇГ®Г«Г­ГҐГ­Г­ГіГѕ."""
     pass
 
 def delete_task(task_id):
-    """Удаляет задачу."""
+    """Г“Г¤Г Г«ГїГҐГІ Г§Г Г¤Г Г·Гі."""
     pass
 
 def main():
-    """Главная функция."""
-    print("Добро пожаловать в менеджер задач")
+    """ГѓГ«Г ГўГ­Г Гї ГґГіГ­ГЄГ¶ГЁГї."""
+    print("Г„Г®ГЎГ°Г® ГЇГ®Г¦Г Г«Г®ГўГ ГІГј Гў Г¬ГҐГ­ГҐГ¤Г¦ГҐГ° Г§Г Г¤Г Г·")
 
 if __name__ == "__main__":
     main()
@@ -31,59 +31,36 @@ if __name__ == "__main__":
 tasks = []
 
 def add_task(task):
-    """Добавляет задачу в список."""
+    """Г„Г®ГЎГ ГўГ«ГїГҐГІ Г§Г Г¤Г Г·Гі Гў Г±ГЇГЁГ±Г®ГЄ."""
     tasks.append(task)
-    print(f"Задача '{task}' добавлена.")
+    print(f"Г‡Г Г¤Г Г·Г  '{task}' Г¤Г®ГЎГ ГўГ«ГҐГ­Г .")
 
 def list_tasks():
-    """Выводит список задач."""
+    """Г‚Г»ГўГ®Г¤ГЁГІ Г±ГЇГЁГ±Г®ГЄ Г§Г Г¤Г Г·."""
     if not tasks:
-        return "Нет задач."
+        return "ГЌГҐГІ Г§Г Г¤Г Г·."
     return "\n".join(f"{i + 1}. {tasks[i]}" for i in range(len(tasks)))
 
 def complete_task(task_id):
-    """Отмечает задачу как выполненную."""
+    """ГЋГІГ¬ГҐГ·Г ГҐГІ Г§Г Г¤Г Г·Гі ГЄГ ГЄ ГўГ»ГЇГ®Г«Г­ГҐГ­Г­ГіГѕ."""
     try:
         completed_task = tasks.pop(task_id - 1)
-        print(f"Задача '{completed_task}' выполнена.")
+        print(f"Г‡Г Г¤Г Г·Г  '{completed_task}' ГўГ»ГЇГ®Г«Г­ГҐГ­Г .")
     except IndexError:
-        print("Задача не найдена.")
+        print("Г‡Г Г¤Г Г·Г  Г­ГҐ Г­Г Г©Г¤ГҐГ­Г .")
 
 def delete_task(task_id):
-    """Удаляет задачу."""
+    """Г“Г¤Г Г«ГїГҐГІ Г§Г Г¤Г Г·Гі."""
     try:
         deleted_task = tasks.pop(task_id - 1)
-        print(f"Задача '{deleted_task}' удалена.")
+        print(f"Г‡Г Г¤Г Г·Г  '{deleted_task}' ГіГ¤Г Г«ГҐГ­Г .")
     except IndexError:
-        print("Задача не найдена.")
+        print("Г‡Г Г¤Г Г·Г  Г­ГҐ Г­Г Г©Г¤ГҐГ­Г .")
 
 def get_user_choice():
-    """Получает выбор пользователя."""
-    return input("Выберите действие (add/list/complete/delete/exit): ")
+    """ГЏГ®Г«ГіГ·Г ГҐГІ ГўГ»ГЎГ®Г° ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї."""
+    return input("Г‚Г»ГЎГҐГ°ГЁГІГҐ Г¤ГҐГ©Г±ГІГўГЁГҐ (add/list/complete/delete/exit): ")
 
-def main():
-    """Главная функция."""
-    print("Добро пожаловать в менеджер задач")
-    while True:
-        choice = get_user_choice()
-        if choice == "add":
-            task = input("Введите задачу: ")
-            add_task(task)
-        elif choice == "list":
-            print(list_tasks())
-        elif choice == "complete":
-            task_id = int(input("Введите номер задачи для завершения: "))
-            complete_task(task_id)
-        elif choice == "delete":
-            task_id = int(input("Введите номер задачи для удаления: "))
-            delete_task(task_id)
-        elif choice == "exit":
-            print("Выход из программы.")
-            break
-        else:
-            print("Неверный выбор. Пожалуйста, попробуйте снова.")
 
-if __name__ == "__main__":
-    main()
 
 
