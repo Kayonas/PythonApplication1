@@ -55,10 +55,10 @@ def main():
             break
         else:
             print("Неверный выбор. Пожалуйста, попробуйте снова.")
+def vacaonima(serega_pirat):
+    if serega_pirat > 1:
+        return "Ошибка. Серега пират только один"
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     main()
-=======
-    main()
->>>>>>> 3fadb23c1d2f884034c424f6def737483f30563a
+
