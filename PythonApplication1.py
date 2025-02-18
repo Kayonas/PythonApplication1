@@ -30,7 +30,9 @@ def delete_task(task_id):
     except IndexError:
         print("Задача не найдена.")
 
-
+def get_user_choice():
+    """Получает выбор пользователя."""
+    return input("Выберите действие (add/list/complete/delete/exit): ")
 
 def main():
     """Главная функция."""
